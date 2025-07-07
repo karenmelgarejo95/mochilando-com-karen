@@ -1,0 +1,76 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F5F5DC;
+  color: #34495E;
+}
+header {
+  background-color: #E97451;
+  padding: 10px 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  animation: slide 20s infinite;
+}
+.slides img {
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-100vw); }
+  40% { transform: translateX(-200vw); }
+  60% { transform: translateX(-300vw); }
+  80% { transform: translateX(-400vw); }
+  100% { transform: translateX(0); }
+}
+footer {
+  background-color: #78866B;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: #E97451;
+  }
+  .navbar ul.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
